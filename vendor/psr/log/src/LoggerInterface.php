@@ -22,12 +22,12 @@ interface LoggerInterface
     /**
      * System is unusable.
      *
-     * @param string|\Stringable $message
+     * @param \Stringable $message
      * @param mixed[] $context
      *
      * @return void
      */
-    public function emergency(string|\Stringable $message, array $context = []): void;
+    public function emergency(\Stringable $message, array $context = []);
 
     /**
      * Action must be taken immediately.
@@ -35,35 +35,35 @@ interface LoggerInterface
      * Example: Entire website down, database unavailable, etc. This should
      * trigger the SMS alerts and wake you up.
      *
-     * @param string|\Stringable $message
+     * @param \Stringable $message
      * @param mixed[] $context
      *
      * @return void
      */
-    public function alert(string|\Stringable $message, array $context = []): void;
+    public function alert(\Stringable $message, array $context = []);
 
     /**
      * Critical conditions.
      *
      * Example: Application component unavailable, unexpected exception.
      *
-     * @param string|\Stringable $message
+     * @param \Stringable $message
      * @param mixed[] $context
      *
      * @return void
      */
-    public function critical(string|\Stringable $message, array $context = []): void;
+    public function critical(\Stringable $message, array $context = []);
 
     /**
      * Runtime errors that do not require immediate action but should typically
      * be logged and monitored.
      *
-     * @param string|\Stringable $message
+     * @param \Stringable $message
      * @param mixed[] $context
      *
      * @return void
      */
-    public function error(string|\Stringable $message, array $context = []): void;
+    public function error(\Stringable $message, array $context = []);
 
     /**
      * Exceptional occurrences that are not errors.
@@ -71,55 +71,55 @@ interface LoggerInterface
      * Example: Use of deprecated APIs, poor use of an API, undesirable things
      * that are not necessarily wrong.
      *
-     * @param string|\Stringable $message
+     * @param \Stringable $message
      * @param mixed[] $context
      *
      * @return void
      */
-    public function warning(string|\Stringable $message, array $context = []): void;
+    public function warning(\Stringable $message, array $context = []);
 
     /**
      * Normal but significant events.
      *
-     * @param string|\Stringable $message
+     * @param \Stringable $message
      * @param mixed[] $context
      *
      * @return void
      */
-    public function notice(string|\Stringable $message, array $context = []): void;
+    public function notice(\Stringable $message, array $context = []);
 
     /**
      * Interesting events.
      *
      * Example: User logs in, SQL logs.
      *
-     * @param string|\Stringable $message
+     * @param \Stringable $message
      * @param mixed[] $context
      *
      * @return void
      */
-    public function info(string|\Stringable $message, array $context = []): void;
+    public function info(\Stringable $message, array $context = []);
 
     /**
      * Detailed debug information.
      *
-     * @param string|\Stringable $message
+     * @param \Stringable $message
      * @param mixed[] $context
      *
      * @return void
      */
-    public function debug(string|\Stringable $message, array $context = []): void;
+    public function debug(\Stringable $message, array $context = []);
 
     /**
      * Logs with an arbitrary level.
      *
      * @param mixed   $level
-     * @param string|\Stringable $message
+     * @param \Stringable $message
      * @param mixed[] $context
      *
      * @return void
      *
      * @throws \Psr\Log\InvalidArgumentException
      */
-    public function log($level, string|\Stringable $message, array $context = []): void;
+    public function log($level, \Stringable $message, array $context = []);
 }
